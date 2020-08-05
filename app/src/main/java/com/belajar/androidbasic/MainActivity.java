@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.belajar.androidbasic.numberone.FirstActivity;
+import com.belajar.androidbasic.numberthree.ThirdActivity;
 import com.belajar.androidbasic.numbertwo.SecondActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnOne.setOnClickListener(this);
         btnTwo.setOnClickListener(this);
+        btnThree.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.numbertwo:
                 Intent two = new Intent(getApplicationContext(), SecondActivity.class);
                 startActivity(two);
+                break;
+            case R.id.numberthree:
+                Intent three = new Intent(getApplicationContext(), ThirdActivity.class);
+                startActivity(three);
                 break;
         }
     }
